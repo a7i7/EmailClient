@@ -22,6 +22,8 @@ def initializeArguments(arg):
 	arguments["subject"] = None
 	for a in arg:
 		addArgument(a)
+	if arguments['address']!=None:
+		arguments['address']=arguments['address'].split(',')
 
 def addArgument(arg):
 	if(arg.startswith("-")==False):
